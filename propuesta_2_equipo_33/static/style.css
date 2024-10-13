@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Times New Roman', sans-serif; /* Fuente Roboto */
+    background-color: #ff0000; /* Fondo rojo */
+    color: white;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.container {
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 3em;
+    color: white; /* Cambiar a color blanco */
+    margin-bottom: 40px;
+    white-space: nowrap; /* Mostrar el texto en una sola línea */
+}
+
+/* Grid para organizar los apartados */
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    flex-direction: row; /* Asegura que los elementos estén alineados horizontalmente */
+}
+
+/* Estilo para cada tarjeta de logro */
+.card {
+    background-color: #2d2d2d;
+    border: 2px solid #f0c419; /* Borde dorado */
+    border-radius: 10px;
+    padding: 20px;
+    width: calc(33.333% - 20px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Efecto al pasar el ratón por encima */
+}
+
+button {
+    background-color: #f0c419;
+    color: #1e1e1e;
+    font-size: 16px;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #e6b817;
+}
+
+p {
+    color: #b3b3b3;
+    font-size: 14px;
+    margin-top: 0;
+}
+
+h2 {
+    margin-top: 30px;
+    color: #f0c419;
+    font-size: 2em;
+}
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+}
+

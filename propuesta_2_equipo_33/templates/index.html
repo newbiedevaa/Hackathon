@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opciones Financieras</title>
+    <style>
+        body {
+            background-color: #FF0000; /* Rojo */
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 50px;
+        }
+
+        label {
+            display: block;
+            margin: 20px auto;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+            transform: scale(1.5); /* Aumenta el tamaño del checkbox */
+        }
+
+        button {
+            background-color: #4CAF50; /* Verde */
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Elige tus Objetivos Financieros</h1>
+    <form action="/" method="POST">
+        <label>
+            <input type="checkbox" name="options" value="Domina tus finanzas">
+            Domina tus finanzas
+        </label>
+        <label>
+            <input type="checkbox" name="options" value="Planificación de tu futuro financiero">
+            Planificación de tu futuro financiero
+        </label>
+        <label>
+            <input type="checkbox" name="options" value="Invierte en ti, cosecha beneficios">
+            Invierte en ti, cosecha beneficios
+        </label><br><br>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estadísticas de Gastos Mensuales</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #d32f2f, #f44336); /* Fondo degradado */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh; /* Altura completa de la ventana */
+        }
+        .menu {
+            width: 250px;
+            background-color: #ff9999; /* Fondo rosado para el menú */
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Sombra para el menú */
+        }
+        .menu h3 {
+            color: #fff;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .menu ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .menu ul li {
+            margin-bottom: 15px;
+        }
+        .menu ul li a {
+            text-decoration: none;
+            color: white; /* Texto blanco */
+            font-weight: 600;
+            font-size: 16px;
+            display: block;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #d32f2f; /* Fondo rojo para los botones */
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease; /* Transición suave */
+        }
+        .menu ul li a:hover {
+            background-color: #f44336; /* Fondo rojo más claro al pasar el cursor */
+            transform: translateY(-3px); /* Efecto de elevar el botón */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra más intensa al pasar el cursor */
+        }
+        .container {
+            flex-grow: 1;
+            background-color: white;
+            margin: 20px;
+            padding: 30px;
+            border-radius: 10px; /* Bordes redondeados */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra suave */
+            text-align: center;
+            overflow-y: auto;
+        }
+        h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+        .chart-container {
+            text-align: center;
+            margin-top: 20px;
+            animation: fadeIn 0.5s; /* Animación de entrada */
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Menú vertical a la izquierda -->
+    <div class="menu">
+        <h3>Menú</h3>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Perfil</a></li>
+            <li><a href="/videos">Videos</a></li>
+            <li><a href="#">Configuración</a></li>
+            <li><a href="http://127.0.0.1:5000/">Cerrar Sesión</a></li>
+        </ul>
+    </div>
+
+    <!-- Contenedor principal de las estadísticas -->
+    <div class="container">
+        <h2>Estadísticas de Gastos Mensuales</h2>
+        <div class="chart-container">
+            <!-- Gráfica de pastel de gastos -->
+            <img src="{{ pie_chart }}" alt="Gráfica de pastel de gastos mensuales" style="animation: fadeIn 1s;">
+        </div>
+        <h2>Comparación de Ingresos y Egresos</h2>
+        <div class="chart-container">
+            <!-- Gráfica de pastel de ingresos vs egresos -->
+            <img src="{{ income_vs_expense_chart }}" alt="Gráfica de pastel de ingresos y egresos" style="animation: fadeIn 1s;">
+        </div>
+    </div>
+</body>
+</html>

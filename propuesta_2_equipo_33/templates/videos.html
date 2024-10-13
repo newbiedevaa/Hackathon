@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiencias - Scrolling Videos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>Experiencias</h1>
+
+    <div class="video-feed">
+        {% for video_id in videos %}
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/{{ video_id }}?autoplay=1" frameborder="0" allowfullscreen></iframe>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<script>
+    // Aquí podrías agregar JavaScript para el autoplay de videos al hacer scroll si lo deseas
+</script>
+
+</body>
+</html>

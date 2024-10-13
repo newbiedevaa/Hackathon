@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page - Chat</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #d32f2f; /* Fondo rojo */
+            margin: 0;
+            display: flex; /* Usar flexbox para el layout */
+        }
+        /* Estilo para el menú lateral */
+        .sidebar {
+            width: 25%; /* Ancho del menú */
+            background-color: #ffffff; /* Fondo blanco para el menú */
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra suave a la derecha */
+            height: 100vh; /* Altura completa de la ventana */
+            display: flex;
+            flex-direction: column; /* Alinear los elementos en columna */
+            position: relative; /* Posición relativa para el menú */
+        }
+        .sidebar h2 {
+            text-align: center; /* Centrar el título del menú */
+            margin-bottom: 20px;
+            color: #d32f2f; /* Color del título del menú */
+        }
+        .menu-item {
+            margin-bottom: 15px; /* Espacio entre elementos del menú */
+            cursor: pointer;
+            color: black; /* Color del texto del menú (cambiado a negro) */
+            text-decoration: none; /* Sin subrayado */
+            font-weight: 600; /* Negrita */
+            padding: 10px; /* Espaciado interno */
+            border-radius: 5px; /* Bordes redondeados */
+            transition: background-color 0.3s; /* Transición suave al pasar el cursor */
+        }
+        .menu-item:hover {
+            background-color: #f5f5f5; /* Color de fondo al pasar el cursor */
+        }
+        h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.8em; /* Tamaño de fuente ajustado */
+        }
+        .chat-container {
+            flex: 1; /* Ocupa el resto del espacio disponible */
+            max-width: 75%; /* Asegura que el chat ocupe 3/4 de la pantalla */
+            margin: 20px; /* Margen alrededor del chat */
+            background-color: #ffffff; /* Fondo blanco para el chat */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra negra suave, reducida */
+            color: black; /* Texto en negro dentro del chat */
+        }
+        .chat-box {
+            height: 300px;
+            border: 2px solid #d32f2f; /* Borde rojo */
+            padding: 10px;
+            overflow-y: scroll;
+            margin-bottom: 10px;
+            background-color: #f9f9f9; /* Fondo gris claro dentro del chat */
+        }
+        .message-input {
+            width: calc(100% - 120px);
+            padding: 10px;
+            border: 2px solid #d32f2f; /* Borde rojo */
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        .send-btn {
+            width: 100px;
+            padding: 10px;
+            background-color: #d32f2f; /* Botón rojo */
+            color: white; /* Texto en blanco */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-left: 10px;
+            transition: background-color 0.3s; /* Transición suave al pasar el cursor */
+        }
+        .send-btn:hover {
+            background-color: white; /* Cambia a blanco al pasar el cursor */
+            color: #d32f2f; /* Texto en rojo */
+            border: 2px solid #d32f2f; /* Borde rojo en el hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Menú</h2>
+        <a href="#" class="menu-item">Inicio</a>
+        <a href="#" class="menu-item">Perfil</a>
+        <a href="#" class="menu-item">Configuración</a>
+        <a href="#" class="menu-item">Ayuda</a>
+        <a href="#" class="menu-item
